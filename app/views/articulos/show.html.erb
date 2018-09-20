@@ -1,0 +1,19 @@
+<p>
+<strong> Title:</strong>
+<%= @articulo.title %>
+</p>
+<p>
+<strong> Texto: </strong>
+<%= @articulo.text %>
+</p>
+<p><%= link_to 'Editar', edit_articulo_path(@articulo)%> </p>
+<p><%= link_to 'Regresar', articulos_path%> </p>
+
+<h2>Comentarios</h2>
+
+<% # reeemplza lo que hay en la vista parcial _comentarios%>
+<%= render @articulo.comentarios%>
+
+
+<h2>Agregar comentario</h2>
+<%= render 'comentarios/form' %>
